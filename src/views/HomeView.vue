@@ -8,9 +8,9 @@
             <p>{{ rate }}</p>
           </div>
         </div>
-      </div>
-      <div v-if="displayData">
-        <h3>selected rate is {{ rateData }}</h3>
+        <div v-if="rateData">
+          <h3>You selected {{ rateData }} out of 5</h3>
+        </div>
       </div>
     </div>
   </div>
