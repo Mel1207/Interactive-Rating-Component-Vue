@@ -8,7 +8,8 @@
             <p>{{ rate }}</p>
           </div>
         </div>
-        <div v-if="rateData">
+        <button class="btn" @click="displayRate">Submit</button>
+        <div v-if="displayData">
           <h3>You selected {{ rateData }} out of 5</h3>
         </div>
       </div>
@@ -25,16 +26,21 @@ export default {
   setup() {
     const rates = ref([1, 2, 3, 4, 5])
     let rateData = ref(null)
-    let displayData = true
+    let displayData = ref(false)
 
     const getRate = (id) => {
       console.log(`selected rate is ${id}`)
       rateData.value = id
-      displayData = true
-      console.log(rateData.value)
+     
     }
 
-    return { rates, rateData, getRate, rateData, displayData }
+    const displayRate = () => {
+      // displayData = true
+      console.log(rateData.value)
+      displayData.value = true
+    }
+
+    return { rates, rateData, getRate, rateData, displayData, displayRate }
   }
 }
 </script>
@@ -63,5 +69,14 @@ export default {
   h3 {
     font-size: 30px;
     color: white !important;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background: #FC7613;
+    border-radius: 30px;
+    cursor: pointer;
   }
 </style>
