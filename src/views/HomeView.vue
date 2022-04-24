@@ -1,20 +1,19 @@
 <template>
   <div class="main w-full h-screen bg-main-black"> 
     <div class="container">
-      <div class="main-box bg-main-gray-dark h-box-type w-box-type rounded-3xl p-5 mx-5">
+      <div class="main-box bg-main-gray-dark h-auto w-box-type rounded-3xl p-7 mx-5">
         <div v-if="defaultData">
           <img src="../assets/images/icon-star.svg" alt="Icon star" class="p-4 bg-gray-700 rounded-full mb-5">
-          <h1 class="text-white text-2xl mb-3">How did we do?</h1>
+          <h1 class="text-white text-3xl mb-3 font-medium">How did we do?</h1>
           <p class=" text-gray-400 mb-5">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
           <div class=" flex w-full items-center justify-between mb-5">
             <div v-for="rate in rates" :key="rate" @click="getRate(rate)">
-              <div class="box-rate rounded-full"> 
-                <p class="text-lg">{{ rate }}</p>
+              <div class="box-rate rounded-full cursor-pointer h-10 w-10 bg-gray-500 relative"> 
+                <p class="text-lg absolute top-1/2 lef-1/2 text-white font-medium">{{ rate }}</p>
               </div>
             </div>
           </div>
-         
-          <button class="btn" @click="displayRate">Submit</button>
+          <button class="btn text-white font-medium tracking-widest" @click="displayRate">SUBMIT</button>
         </div>
         <div v-else>
           <h3>You selected {{ rateData }} out of 5</h3>
@@ -53,18 +52,16 @@ export default {
 </script>
 
 <style scoped>
-  .box-rate {
+  /* .box-rate {
     color: #fff !important;
     padding: 10px;
     background: red;
-    /* display: block; */
-    /* width: max-content; */
     align-items: center;
     height: 30px;
     width: 30px;
     margin-bottom: 15px;
     position: relative;
-  }
+  } */
 
   p.text-lg {
     position: absolute;
