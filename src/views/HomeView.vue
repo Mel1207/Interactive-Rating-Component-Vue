@@ -2,14 +2,16 @@
   <div class="main w-full h-screen bg-main-black"> 
     <div class="container">
       <div class="main-box bg-main-gray-dark h-box-type w-box-type rounded-3xl p-5 mx-5">
-        <h2>Hey there!</h2>
-        <div v-for="rate in rates" :key="rate" @click="getRate(rate)">
-          <div class="box-rate"> 
-            <p>{{ rate }}</p>
+        <div v-if="defaultData">
+          <h2>Hey there!</h2>
+          <div v-for="rate in rates" :key="rate" @click="getRate(rate)">
+            <div class="box-rate"> 
+              <p>{{ rate }}</p>
+            </div>
           </div>
+          <button class="btn" @click="displayRate">Submit</button>
         </div>
-        <button class="btn" @click="displayRate">Submit</button>
-        <div v-if="displayData">
+        <div v-else>
           <h3>You selected {{ rateData }} out of 5</h3>
         </div>
       </div>
@@ -25,8 +27,8 @@ export default {
   components: {},
   setup() {
     const rates = ref([1, 2, 3, 4, 5])
+    let defaultData = ref(true)
     let rateData = ref(null)
-    let displayData = ref(false)
 
     const getRate = (id) => {
       console.log(`selected rate is ${id}`)
@@ -37,10 +39,10 @@ export default {
     const displayRate = () => {
       // displayData = true
       console.log(rateData.value)
-      displayData.value = true
+      defaultData.value = false
     }
 
-    return { rates, rateData, getRate, rateData, displayData, displayRate }
+    return { rates, rateData, getRate, rateData, displayRate, defaultData }
   }
 }
 </script>
