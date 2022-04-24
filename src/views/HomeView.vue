@@ -3,8 +3,10 @@
     <div class="container">
       <div class="main-box bg-main-gray-dark h-box-type w-box-type rounded-3xl p-5 mx-5">
         <div v-if="defaultData">
-          <h2>Hey there!</h2>
-          <div class=" flex w-full items-center justify-between">
+          <img src="../assets/images/icon-star.svg" alt="Icon star" class="p-4 bg-gray-700 rounded-full mb-5">
+          <h1 class="text-white text-2xl mb-3">How did we do?</h1>
+          <p class=" text-gray-400 mb-5">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+          <div class=" flex w-full items-center justify-between mb-5">
             <div v-for="rate in rates" :key="rate" @click="getRate(rate)">
               <div class="box-rate rounded-full"> 
                 <p class="text-lg">{{ rate }}</p>
@@ -64,7 +66,7 @@ export default {
     position: relative;
   }
 
-  p {
+  p.text-lg {
     position: absolute;
     top: 50%;
     left: 50%;
