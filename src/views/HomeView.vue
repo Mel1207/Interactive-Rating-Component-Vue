@@ -4,11 +4,14 @@
       <div class="main-box bg-main-gray-dark h-box-type w-box-type rounded-3xl p-5 mx-5">
         <div v-if="defaultData">
           <h2>Hey there!</h2>
-          <div v-for="rate in rates" :key="rate" @click="getRate(rate)">
-            <div class="box-rate"> 
-              <p>{{ rate }}</p>
+          <div class=" flex w-full items-center justify-between">
+            <div v-for="rate in rates" :key="rate" @click="getRate(rate)">
+              <div class="box-rate rounded-full"> 
+                <p class="text-lg">{{ rate }}</p>
+              </div>
             </div>
           </div>
+         
           <button class="btn" @click="displayRate">Submit</button>
         </div>
         <div v-else>
