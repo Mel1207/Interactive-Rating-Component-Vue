@@ -16,7 +16,10 @@
           <button class="btn text-white font-medium tracking-widest" @click="displayRate">SUBMIT</button>
         </div>
         <div v-else>
-          <h3>You selected {{ rateData }} out of 5</h3>
+          <img src="../assets/images/illustration-thank-you.svg" alt="Thank you" class="mx-auto mb-5">
+          <p class="font-medium text-orange-400 px-2 py-1 rounded-2xl bg-gray-600 w-max mx-auto">You selected {{ rateData }} out of 5</p>
+          <h1 class="text-2xl font-bold text-white my-5 text-center">Thank you!</h1>
+          <p class="text-gray-400 text-center">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
         </div>
       </div>
     </div>
@@ -62,6 +65,10 @@ export default {
     margin-bottom: 15px;
     position: relative;
   } */
+
+  .text-orange-400 {
+    color: #FC7613;
+  }
 
   p.text-lg {
     position: absolute;
