@@ -1,7 +1,7 @@
 <template>
   <div class="main w-full h-screen bg-main-black"> 
     <div class="container">
-      <div class="main-box bg-main-gray-dark h-auto w-box-type rounded-3xl p-7 mx-5">
+      <div class="main-box bg-main-gray-dark h-box-type w-box-type rounded-3xl p-7 mx-5">
         <div v-if="defaultData">
           <img src="../assets/images/icon-star.svg" alt="Icon star" class="p-4 bg-gray-700 rounded-full mb-5">
           <h1 class="text-white text-3xl mb-3 font-medium">How did we do?</h1>
@@ -9,11 +9,11 @@
           <div class=" flex w-full items-center justify-between mb-5">
             <div v-for="rate in rates" :key="rate" @click="getRate(rate)">
               <div class="box-rate rounded-full cursor-pointer h-10 w-10 bg-gray-500 relative"> 
-                <p class="text-lg absolute top-1/2 lef-1/2 text-white font-medium">{{ rate }}</p>
+                <p class="text-lg absolute text-white font-medium">{{ rate }}</p>
               </div>
             </div>
           </div>
-          <button class="btn text-white font-medium tracking-widest" @click="displayRate">SUBMIT</button>
+          <button class="btn text-white font-medium tracking-widest bg-orange-400 w-full rounded-3xl py-3" @click="displayRate">SUBMIT</button>
         </div>
         <div v-else>
           <img src="../assets/images/illustration-thank-you.svg" alt="Thank you" class="mx-auto mb-5">
@@ -40,11 +40,9 @@ export default {
     const getRate = (id) => {
       console.log(`selected rate is ${id}`)
       rateData.value = id
-     
     }
 
     const displayRate = () => {
-      // displayData = true
       console.log(rateData.value)
       defaultData.value = false
     }
@@ -55,39 +53,10 @@ export default {
 </script>
 
 <style scoped>
-  /* .box-rate {
-    color: #fff !important;
-    padding: 10px;
-    background: red;
-    align-items: center;
-    height: 30px;
-    width: 30px;
-    margin-bottom: 15px;
-    position: relative;
-  } */
-
-  .text-orange-400 {
-    color: #FC7613;
-  }
-
   p.text-lg {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  h3 {
-    font-size: 30px;
-    color: white !important;
-  }
-
-  .btn {
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    background: #FC7613;
-    border-radius: 30px;
-    cursor: pointer;
   }
 </style>
