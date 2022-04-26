@@ -4,6 +4,38 @@
 
 @tailwind utilities;
 
+.main {
+    @apply w-full h-screen bg-main-black
+}
+
+.main-box {
+    @apply bg-main-gray-dark h-box-type w-box-type rounded-3xl p-7 mx-5
+}
+
+.main-title {
+    @apply text-white text-3xl mb-3 font-medium
+}
+
 .container {
     @apply mx-auto flex items-center justify-center h-full
+}
+
+.btn {
+    @apply text-white font-medium tracking-widest w-full rounded-3xl h-11 bg-orange-400 transition-all
+}
+
+.btn:hover {
+    @apply bg-white text-orange-400
+}
+
+.box-rate {
+    @apply rounded-full cursor-pointer h-10 w-10 bg-gray-700 flex items-center justify-center text-gray-400 font-medium transition-all
+}
+
+.box-rate:hover {
+    @apply text-white bg-gray-500
+}
+
+.box-rate.active {
+    @apply bg-orange-400 text-white
 }
