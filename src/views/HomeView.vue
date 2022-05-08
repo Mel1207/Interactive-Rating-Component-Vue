@@ -35,7 +35,7 @@ export default {
       { rate: 1, isActive: false  },
       { rate: 2, isActive: true  },
       { rate: 3, isActive: false  },
-      { rate: 4, isActive: false  },
+      { rate: 4, isActive: true  },
       { rate: 5, isActive: false  },
     
     ])
