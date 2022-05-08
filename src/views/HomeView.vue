@@ -49,7 +49,9 @@ export default {
       rateData.value = id
       rates.value.map(item => item.isActive = false)
 
-      console.log('new array is running')
+      // rates.value.
+
+      console.log(rates.value)
     }
 
     const displayRate = () => {
