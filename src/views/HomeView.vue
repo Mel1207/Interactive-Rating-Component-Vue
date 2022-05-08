@@ -31,7 +31,7 @@ export default {
   name: 'HomeView',
   components: {},
   setup() {
-    const rates = ref([
+    let rates = ref([
       { rate: 1, isActive: false  },
       { rate: 2, isActive: true  },
       { rate: 3, isActive: false  },
@@ -42,9 +42,14 @@ export default {
     let defaultData = ref(true)
     let rateData = ref(null)
 
+    
+
     const getRate = (id) => {
       console.log(`selected rate is ${id}`)
       rateData.value = id
+      rates.value.map(item => item.isActive = false)
+
+      console.log('new array is running')
     }
 
     const displayRate = () => {
