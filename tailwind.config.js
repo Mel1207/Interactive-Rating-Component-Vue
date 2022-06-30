@@ -7,7 +7,8 @@ module.exports = {
         'main-black': '#141519',
         'main-gray': {
           'dark': '#1F2630',
-          'light': '#7C8898'
+          'dark-02': '#273039',
+          'light': '#7C8898',
         },
         'orange': {
           '400': '#FC7613'
@@ -17,7 +18,7 @@ module.exports = {
         'box-type': '400px'
       },
       height: {
-        'box-type': '375px'
+        'box-type': '410px'
       }
 
     },
