@@ -28,8 +28,6 @@
 import { ref } from '@vue/reactivity'
 
 export default {
-  name: 'HomeView',
-  components: {},
   setup() {
     let rates = ref([
       { rate: 1, isActive: false  },
@@ -43,7 +41,7 @@ export default {
     let rateData = ref(0)
 
     const getRate = (id) => {
-      console.log(`selected rate is ${id}`)
+      // console.log(`selected rate is ${id}`)
       rateData.value = id
     }
 
@@ -52,7 +50,7 @@ export default {
       defaultData.value = false
     }
 
-    return { rates, rateData, getRate, rateData, displayRate, defaultData }
+    return { rates, rateData, rateData, defaultData, displayRate, getRate}
   }
 }
 </script>
