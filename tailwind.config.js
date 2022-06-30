@@ -17,10 +17,6 @@ module.exports = {
       width: {
         'box-type': '400px'
       },
-      height: {
-        'box-type': '410px'
-      }
-
     },
   },
   variants: {

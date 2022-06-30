@@ -9,7 +9,7 @@
 }
 
 .main-box {
-    @apply bg-main-gray-dark h-box-type w-box-type rounded-3xl py-8 px-7 mx-5
+    @apply sm:h-auto bg-main-gray-dark w-box-type rounded-3xl py-8 px-7 mx-5
 }
 
 .main-title {
