@@ -40,7 +40,7 @@ export default {
     
     ])
     let defaultData = ref(true)
-    let rateData = ref(null)
+    let rateData = ref(0)
 
     
 
